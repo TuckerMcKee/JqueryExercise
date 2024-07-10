@@ -80,8 +80,19 @@
 });
 $('article').find('img').addClass('image-center');
 $('p').eq($('p').length - 1).remove();
-let randSize = math.floor(math.random()*101);
+let randSize = Math.floor(Math.random()*101);
 $('#title').css("fontSize",`${randSize}px`);
+$('ol').append('<li>Whatever you want</li>');
+$('ol').html('<p>Sorry about the list</p>');
+$('.form-control').on('change',function() {
+  let red = $('.form-control')[0].value;
+  let blue = $('.form-control')[1].value;
+  let green = $('.form-control')[2].value;
+  $('body').css('background-color',`rgb(${red},${blue},${green})`)
+});
+$('img').on('click',function(e) {
+  e.target.remove();
+})
 </script>
 </body>
 
